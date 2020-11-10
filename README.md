@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## TROUSSEAU
 
-You can use the [editor on GitHub](https://github.com/Trousseau-io/trousseau-io.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Trousseau secures and provides access Secrets for Kubernetes and more, either on-premises, in the cloud or hybrid.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Why Trousseau
 
-### Markdown
+Kubernetes users are always facing the very same question; how will we handle our Secrets? From a pure Kubernetes
+perspectives, the by-design solution using etcd w/o encryption is not enough. 
+With Trousseau, your applications running within Kubernetes cluster(s) or oustide can access their secrets in a safe
+way with unique features. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Trousseau is a completly open source and design to be a solution in a landscape where there isn't many options to chose from. 
 
-```markdown
-Syntax highlighted code block
+## What Trousseau will provide
 
-# Header 1
-## Header 2
-### Header 3
+* A easy deployment using an operator
+* A sidecar option to proxy authentication towards external services
+* An API based secure password management for CRUD activities
+* A zero trust option to generate new secrets and configure remote services 
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Trousseau-io/trousseau-io.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
