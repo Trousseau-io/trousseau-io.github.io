@@ -6,7 +6,7 @@ layout: default
 
 Trousseau secures and provides access Secrets for Kubernetes and more, either on-premises, in the cloud or hybrid.<br>
 
-### Why Trousseau
+### why Trousseau
 
 Kubernetes users are always facing the very same question; how will we handle our Secrets? From a pure Kubernetes
 perspectives, the by-design solution using etcd w/o encryption is not enough. 
@@ -15,7 +15,7 @@ way with unique features.
 
 Trousseau is a completly open source and design to be a solution in a landscape where there isn't many options to chose from. 
 
-### What Trousseau will provide
+### what Trousseau will provide
 
 * A easy deployment using an operator
 * A sidecar option to proxy authentication towards external services
@@ -25,7 +25,7 @@ Trousseau is a completly open source and design to be a solution in a landscape 
 ### about the name
 The name "Trousseau" comes from the French language used within the context of "Trousseau de clés" or "Keyring".
 
-## Documentation 
+## documentation 
 
 [Architecture](./001-architecture.html) <br>
 [Quickstart guide](./002-quickstart.html) <br>

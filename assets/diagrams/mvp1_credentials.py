@@ -15,10 +15,12 @@ graph_attr = {
 with Diagram("Trousseau MVP1 - Simple Credentials", show=False, direction="LR", graph_attr=graph_attr):
     user = Users("user")
     cli = Client("client")
-    secret = Secret("secret")
+    secret1 = Secret("secret")
+    secret2 = Secret("secret")
     server = Server("server")
-    keyvalue = Etcd("key-value store")
+    keyvalue = Server("key-value store")
 
-    user >> secret >> cli >> server >> keyvalue
+    user >> secret1 >> cli 
+    cli >> server >> secret2 >> keyvalue
     keyvalue << server << cli << user
 
