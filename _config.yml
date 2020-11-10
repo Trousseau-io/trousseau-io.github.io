@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
+color_scheme: "dark"
 title: Trousseau
 description: Secure and access your Kubernetes secrets and more
