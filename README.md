@@ -18,3 +18,10 @@ Trousseau is a completly open source and design to be a solution in a landscape 
 * An API based secure password management for CRUD activities
 * A zero trust option to generate new secrets and configure remote services 
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
