@@ -17,7 +17,7 @@ with Diagram("Trousseau MVP1 - Generate a Secret", show=False, direction="LR", g
     cli = Client("client")
     secret = Secret("secret")
     server = Server("server")
-    keyvalue = Etcd("key-value store")
+    keyvalue = Server("key-value store")
 
     user >> cli >> server >> secret >> keyvalue
     keyvalue << server << cli << user
