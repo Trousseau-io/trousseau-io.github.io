@@ -29,7 +29,25 @@ Features
 * Validate authorization access 1 single simple policy (if identity ok, access granted)
 
 ### MVP1.0 blueprint 
-The architecture takes into consideration two 
+The architecture takes into consideration two scenarios related to the creation of secrets:
+* existing credentials to become a new secret 
+* generating a new secret
+
+The first scenario of bringing existing credentials to be converted to a secret can't be optimized for security as per their origins:
+
+![existing_credentials](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
+
+Considering the above diagram, existing credentials will be processes by the client towards the server to be inserted within the key-value store. 
+This scenario exposes the secret at the client side level which, despite many different approach, could be retrieved in different ways. 
+
+The second scenario of generating a new secret offers the capability of totally ofuscating its value.
+
+![generating_secrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
+
+Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side. 
+
+
+
 
 
 
