@@ -35,7 +35,7 @@ The architecture takes into consideration two scenarios related to the creation 
 
 The first scenario of bringing existing credentials to be converted to a secret can't be optimized for security as per their origins:
 
-![existing_credentials](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
+![existing_credentials](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_simple_credentials.png)
 
 Considering the above diagram, existing credentials will be processes by the client towards the server to be inserted within the key-value store. 
 This scenario exposes the secret at the client side level which, despite many different approach, could be retrieved in different ways. 
