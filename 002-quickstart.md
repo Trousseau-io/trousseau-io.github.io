@@ -4,6 +4,6 @@ layout: default
 
 [back](./)
 
-## Trousseau Quickstart
+## Trousseau quickstart
 
 TODO
