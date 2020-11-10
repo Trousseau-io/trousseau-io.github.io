@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## TROUSSEAU
 
 Trousseau secures and provides access Secrets for Kubernetes and more, either on-premises, in the cloud or hybrid.
