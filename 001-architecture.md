@@ -4,6 +4,6 @@ layout: default
 
 [back](./)
 
-## Trousseau Architecture
+## Trousseau architecture
 
 test
