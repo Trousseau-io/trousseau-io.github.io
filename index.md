@@ -20,9 +20,9 @@ Trousseau is a completly open source and design to be a solution in a landscape 
 
 ## Documentation 
 
-[Architecture](./001-architecture.html) 
-[Quickstart guide](./002-quickstart.html)
-[Deployment](./003-deployment.html)
-[Monitoring](./003-monitoring.html)
-[Roadmap](./004-roadmap.html)
-[Contributing](./005-contributing.html)
+[Architecture](./001-architecture.html) <br>
+[Quickstart guide](./002-quickstart.html) <br>
+[Deployment](./003-deployment.html) <br>
+[Monitoring](./003-monitoring.html) <br>
+[Roadmap](./004-roadmap.html) <br>
+[Contributing](./005-contributing.html) <br>
