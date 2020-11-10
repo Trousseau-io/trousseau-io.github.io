@@ -6,4 +6,4 @@ layout: default
 
 ## Trousseau architecture
 
-test
+TODO
