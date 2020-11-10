@@ -4,6 +4,6 @@ layout: default
 
 [back](./)
 
-## Trousseau Monitoring
+## Trousseau monitoring
 
 TODO
