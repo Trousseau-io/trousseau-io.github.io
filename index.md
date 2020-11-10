@@ -26,4 +26,4 @@ Trousseau is a completly open source and design to be a solution in a landscape 
   {% endfor %}
 </ul>
 
-[Link to another page](./_posts/001-architecture.html)
+[Link to another page](./001-architecture.html)
