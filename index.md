@@ -18,4 +18,11 @@ Trousseau is a completly open source and design to be a solution in a landscape 
 * An API based secure password management for CRUD activities
 * A zero trust option to generate new secrets and configure remote services 
 
-[Architecture](./001-architecture.html)
+## Documentation 
+
+[Architecture](./001-architecture.html) 
+[Quickstart guide](./002-quickstart.html)
+[Deployment](./003-deployment.html)
+[Monitoring](./003-monitoring.html)
+[Roadmap](./004-roadmap.html)
+[Contributing](./005-contributing.html)
