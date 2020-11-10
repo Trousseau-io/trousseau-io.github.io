@@ -8,6 +8,8 @@ layout: default
 
 As per Trousseau [roadmap](./005-roadmap.html), releases are defined as a MVP or Minimal Viable Product with a well defined set of features. The 
 
+## Near-future 
+
 ### MVP1.0
 The version 1.0 target a production grade MVP with a limited set of features matching 3 simple use cases.
 
@@ -26,3 +28,11 @@ Features
 * Validate identity via Kubernetes Auth method
 * Validate authorization access 1 single simple policy (if identity ok, access granted)
 
+### MVP1.0 blueprint 
+
+
+
+
+
+## Future work
+TODO
