@@ -28,7 +28,7 @@ Features
 * Validate identity via Kubernetes Auth method
 * Validate authorization access 1 single simple policy (if identity ok, access granted)
 
-### MVP1.0 blueprint 
+### MVP1.0 blueprint overview
 The MVP1.0 architecture aims to a single instance approach with a limited the code footprint and components. Trousseau MVP1.0 will consist of several main components working securely to handle CRUD operations:
 
 * clectl; the command line interface providing connectivity to one or multiple Trousseau instances and handle CRUD operations
@@ -39,13 +39,16 @@ The below figure shows a basic representation of the flow:
 ![mvp1overview](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_overview.png)
 
 ### MVP1.0 Use cases
-
 #### MVP1.0 CRUD Operations
-The architecture takes into consideration two scenarios related to the creation of secrets:
-* existing credentials to become a new secret 
+The use case takes into consideration two scenarios related to the creation of secrets:
+* injecting an existing secret
 * generating a new secret
 
-The first scenario of bringing existing credentials to be converted to a secret can't be optimized for security as per their origins:
+##### injecting an existing secret
+This scenario takes an already existing secret, like the credentials ```john/mysuprP@ssw0rd```, and injects it within Trousseau, either for safe keeping or for dynamic usage within an application. 
+From a secret perspective, this is what could be called an "almost secret" since the key-value is either existing within another systems or files (happy csv/xls day!) and the pair will transit to Trousseau. This scenario will unmasked the secret and expose it to potential leakage during the transit to Trousseau.
+
+From an operation perspective, the create secret will require to format as safely as possible the key-value in order to make it transit to ```trousseaud``` after using the ```clectl``` command. 
 
 ![existingcredentials](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_simple_credentials.png)
 
@@ -56,9 +59,12 @@ The second scenario of generating a new secret offers the capability of totally 
 
 ![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
 
-Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side. 
+Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side.
 
-#### MVP1.0 Features
+#### Handle a secret
+
+
+### MVP1.0 Features
 
 ## future work
 This section provides an overview of Trousseau vision for the next MVP releases.
