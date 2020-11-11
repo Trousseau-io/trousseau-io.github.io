@@ -35,8 +35,10 @@ The MVP1.0 architecture aims to a single instance approach with a limited the co
 * trousseaud; the server instance acting as a broker towards the key-value store
 * key-value store; the key-value store is based on a single instance of an encrypted etcd at the current stage 
 
+The below figure shows a basic representation of the flow: 
 ![mvp1overview](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_overview.png)
 
+### MVP1.0 CRUD Operations
 The architecture takes into consideration two scenarios related to the creation of secrets:
 * existing credentials to become a new secret 
 * generating a new secret
