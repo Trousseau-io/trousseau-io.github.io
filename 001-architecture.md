@@ -38,7 +38,10 @@ The MVP1.0 architecture aims to a single instance approach with a limited the co
 The below figure shows a basic representation of the flow: 
 ![mvp1overview](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_overview.png)
 
-### MVP1.0 CRUD Operations
+### MVP1.0 Use cases
+
+### MVP1.0 Features
+#### MVP1.0 CRUD Operations
 The architecture takes into consideration two scenarios related to the creation of secrets:
 * existing credentials to become a new secret 
 * generating a new secret
