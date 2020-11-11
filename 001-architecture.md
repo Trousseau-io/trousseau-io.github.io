@@ -35,7 +35,7 @@ The MVP1.0 architecture aims to a single instance approach with a limited the co
 * trousseaud; the server instance acting as a broker towards the key-value store
 * key-value store; the key-value store is based on a single instance of an encrypted etcd at the current stage 
 
-![mvp1_overview](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_overview.png)
+![mvp1overview](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_overview.png)
 
 The architecture takes into consideration two scenarios related to the creation of secrets:
 * existing credentials to become a new secret 
@@ -43,14 +43,14 @@ The architecture takes into consideration two scenarios related to the creation 
 
 The first scenario of bringing existing credentials to be converted to a secret can't be optimized for security as per their origins:
 
-![existing_credentials](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_simple_credentials.png)
+![existingcredentials](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_simple_credentials.png)
 
 Considering the above diagram, existing credentials will be processes by the client towards the server to be inserted within the key-value store. 
 This scenario exposes the secret at the client side level which, despite many different approach, could be retrieved in different ways. 
 
 The second scenario of generating a new secret offers the capability of totally ofuscating its value.
 
-![generating_secrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
+![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
 
 Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side. 
 
