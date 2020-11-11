@@ -29,6 +29,12 @@ Features
 * Validate authorization access 1 single simple policy (if identity ok, access granted)
 
 ### MVP1.0 blueprint 
+The MVP1.0 architecture aims to be simple and easy to maintain by limiting the code and components. Trousseau MVP1.0 will consist of several main components working securely to handle CRUD operations:
+
+* clectl; the command line interface providing connectivity to one or multiple Trousseau instances and handle CRUD operations
+* trousseaud; the server instance acting as a broker towards the key-value store
+* key-value store; the key-value store is based on a single instance of an encrypted etcd at the current stage 
+
 The architecture takes into consideration two scenarios related to the creation of secrets:
 * existing credentials to become a new secret 
 * generating a new secret
@@ -45,12 +51,6 @@ The second scenario of generating a new secret offers the capability of totally 
 ![generating_secrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
 
 Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side. 
-
-
-
-
-
-
 
 ## future work
 TODO
