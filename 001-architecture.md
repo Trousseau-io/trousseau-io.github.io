@@ -11,7 +11,7 @@ As per Trousseau [roadmap](./005-roadmap.html), releases are defined as a MVP or
 ## near-future 
 
 ### MVP1.0
-The version 1.0 target a production grade MVP with a limited set of features matching 3 simple use cases.
+The version 1.0 target a production grade MVP with a limited set of features matching 3 simple use cases from which features are defined.
 
 Use cases
 * Create, Read, Update, Delete (CRUD) operations of Secrets from a CLI perspective
@@ -40,7 +40,6 @@ The below figure shows a basic representation of the flow:
 
 ### MVP1.0 Use cases
 
-### MVP1.0 Features
 #### MVP1.0 CRUD Operations
 The architecture takes into consideration two scenarios related to the creation of secrets:
 * existing credentials to become a new secret 
@@ -58,6 +57,8 @@ The second scenario of generating a new secret offers the capability of totally 
 ![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
 
 Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side. 
+
+#### MVP1.0 Features
 
 ## future work
 This section provides an overview of Trousseau vision for the next MVP releases.
