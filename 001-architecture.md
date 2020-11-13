@@ -39,7 +39,7 @@ The below figure shows a basic representation of the flow:
 ![mvp1overview](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_overview.png)
 
 ### MVP1.0 Use cases
-#### MVP1.0 CRUD Operations
+#### create, read, update, delete (CRUD) operations of Secrets from a CLI perspective
 The use case takes into consideration two scenarios related to the creation of secrets:
 * injecting an existing secret
 * generating a new secret
@@ -53,15 +53,14 @@ From a secret perspective, this is what could be called an "almost secret" since
 From an operation perspective, the ```create``` operation will require to format as safely as possible the existing secret in order to transfer it to ```trousseaud``` after being process via ```clectl```. Considering the above diagram, the main surface attack exists prior to the transfer to ```trousseaud```.
 
 ##### generating a new scret
-This scenario takes a different approach about generated a secret while being totally ofuscated to the user. The user will ```create``` a new secret which can be retrieve later from a CLI, API and Kubernetes secret perspective. 
-*Note that or be securely passed to a service (like a DB).* 
+This scenario takes a different approach about generated a secret while being totally ofuscated to the user. The user will ```create``` a new secret which can be retrieve later from a CLI, API and Kubernetes secret perspective, and even be securely passed to a service like a DB (see next use case details).
 The second scenario of generating a new secret offers the capability of totally ofuscating its value.
 
 ![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
 
 Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side.
 
-#### Handle a secret
+#### handle a secret type "login credential" to access an external service like a DB
 
 
 ### MVP1.0 Features
