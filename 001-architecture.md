@@ -62,7 +62,7 @@ Considering the above diagram, generating a secret from a client side will not e
 #### handle a secret type "login credential" to access an external service like a DB
 This scenario leverage the generating a new secret and pass it to services for which a package has been define to insure a full secure transition of the credetentials to that service. 
 
-![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret_to_a_3rd_party.png)
+![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_&_handle_a_secret_to_a_3rd_party.png)
 
 #### provide the basic health status of the service
 
