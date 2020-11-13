@@ -46,15 +46,15 @@ The use case takes into consideration two scenarios related to the creation of s
 
 ##### injecting an existing secret
 This scenario takes an already existing secret, like the credentials ```john/mysuprP@ssw0rd```, and injects it within Trousseau, either for safe keeping or for dynamic usage within an application. 
-From a secret perspective, this is what could be called an "almost secret" since the key-value is either existing within another systems or files (happy csv/xls day!) and the pair will transit to Trousseau. This scenario will unmasked the secret and expose it to potential leakage during the transit to Trousseau.
-
-From an operation perspective, the create secret will require to format as safely as possible the key-value in order to make it transit to ```trousseaud``` after using the ```clectl``` command. 
+From a secret perspective, this is what could be called an "almost secret" since the key-value is either existing within another systems or files (happy csv/xls day!) and the pair will transit to Trousseau. This scenario will unmasked the secret and expose it to potential leakage during CLI handling prior to transiting to ```trousseaud```.
 
 ![existingcredentials](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_simple_credentials.png)
 
-Considering the above diagram, existing credentials will be processes by the client towards the server to be inserted within the key-value store. 
-This scenario exposes the secret at the client side level which, despite many different approach, could be retrieved in different ways. 
+From an operation perspective, the ```create``` operation will require to format as safely as possible the existing secret in order to transfer it to ```trousseaud``` after being process via ```clectl```. Considering the above diagram, the main surface attack exists prior to the transfer to ```trousseaud```.
 
+##### generating a new scret
+This scenario takes a different approach about generated a secret while being totally ofuscated to the user. The user will ```create``` a new secret which can be retrieve later from a CLI, API and Kubernetes secret perspective. 
+*Note that or be securely passed to a service (like a DB).* 
 The second scenario of generating a new secret offers the capability of totally ofuscating its value.
 
 ![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
