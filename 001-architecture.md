@@ -31,8 +31,8 @@ Features
 ### MVP1.0 blueprint overview
 The MVP1.0 architecture aims to a single instance approach with a limited the code footprint and components. Trousseau MVP1.0 will consist of several main components working securely to handle CRUD operations:
 
-* clectl; the command line interface providing connectivity to one or multiple Trousseau instances and handle CRUD operations
-* trousseaud; the server instance acting as a broker towards the key-value store
+* ```clectl```; the command line interface providing connectivity to one or multiple Trousseau instances and handle CRUD operations
+* ```trousseaud```; the server instance acting as a broker towards the key-value store
 * key-value store; the key-value store is based on a single instance of an encrypted key-value store instance at the current stage 
 
 The below figure shows a basic representation of the flow: 
