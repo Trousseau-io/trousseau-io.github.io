@@ -54,14 +54,17 @@ From an operation perspective, the ```create``` operation will require to format
 
 ##### generating a new scret
 This scenario takes a different approach about generated a secret while being totally ofuscated to the user. The user will ```create``` a new secret which can be retrieve later from a CLI, API and Kubernetes secret perspective, and even be securely passed to a service like a DB (see next use case details).
-The second scenario of generating a new secret offers the capability of totally ofuscating its value.
 
 ![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret.png)
 
-Considering the above diagram, generating a secret from a client side will not expose the secret value from that standpoint as the overall process is carried over at the server side.
+Considering the above diagram, generating a secret from a client side will not expose the secret value as the overall process is carried over at the server side.
 
 #### handle a secret type "login credential" to access an external service like a DB
+This scenario leverage the generating a new secret and pass it to services for which a package has been define to insure a full secure transition of the credetentials to that service. 
 
+![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_a_secret_to_a_3rd_party.png)
+
+#### provide the basic health status of the service
 
 ### MVP1.0 Features
 
