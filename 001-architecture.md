@@ -6,27 +6,25 @@ layout: default
 
 ## Trousseau architecture
 
-As per Trousseau [roadmap](./005-roadmap.html), releases are defined as a MVP or Minimal Viable Product with a well defined set of features. The 
+As per Trousseau [roadmap](./005-roadmap.html), releases are defined as a MVP or Minimal Viable Product with a well defined set of features.
 
 ## near-future 
-
 ### MVP1.0
 The version 1.0 target a production grade MVP with a limited set of features matching 3 simple use cases from which features are defined.
 
-Use cases
-* Create, Read, Update, Delete (CRUD) operations of Secrets from a CLI perspective
-* Handle a secret type "login credential" to access an external service like a DB
-* Provide the basic health status of the service
-
+Use cases:
+* create, read, update, delete (CRUD) operations of secrets from a CLI perspective
+* handle a secret type to access an external service like a DB
+* provide the basic health status of the service
 The extra mile
 * Read a secret a application within a container using minikube
 
-Features
-* Single instance encrypted key-value store 
-* Server (trousseaud) to act as a broker with the key-value store for clients 
-* Command line interface (clectl) to interact with the server instance
-* Validate identity via Kubernetes Auth method
-* Validate authorization access 1 single simple policy (if identity ok, access granted)
+Required features for the use cases:
+* single instance encrypted key-value store 
+* server (trousseaud) to act as a broker with the key-value store for clients 
+* command line interface (clectl) to interact with the server instance
+* validate identity via Kubernetes Auth method
+* validate authorization access 1 single simple policy (if identity ok, access granted)
 
 ### MVP1.0 blueprint overview
 The MVP1.0 architecture aims to a single instance approach with a limited the code footprint and components. Trousseau MVP1.0 will consist of several main components working securely to handle CRUD operations:
@@ -59,7 +57,7 @@ This scenario takes a different approach about generated a secret while being to
 
 Considering the above diagram, generating a secret from a client side will not expose the secret value as the overall process is carried over at the server side.
 
-#### handle a secret type "login credential" to access an external service like a DB
+#### handle a secret to access an external service like a DB
 This scenario leverage the generating a new secret and pass it to services for which a package has been define to insure a full secure transition of the credetentials to that service. 
 
 ![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_&_handle_a_secret_to_a_3rd_party.png)
