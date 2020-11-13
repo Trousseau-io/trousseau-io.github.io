@@ -58,13 +58,12 @@ This scenario takes a different approach about generated a secret while being to
 Considering the above diagram, generating a secret from a client side will not expose the secret value as the overall process is carried over at the server side.
 
 #### handle a secret to access an external service like a DB
-This scenario leverage the generating a new secret and pass it to services for which a package has been define to insure a full secure transition of the credetentials to that service. 
+This use case leverage the generating a new secret and pass it to services for which a package has been define to insure a full secure transition of the credetentials to that service. 
 
 ![generatingsecrets](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_generate_&_handle_a_secret_to_a_3rd_party.png)
 
 #### provide the basic health status of the service
-
-### MVP1.0 Features
+This use case provides the necessary day 2 operations to monitor the different services involved in providing the Trousseau services. This will be provide via the ```clectl``` and an API endpoint towards the ```trousseaud``` service. 
 
 ## future work
 This section provides an overview of Trousseau vision for the next MVP releases.
