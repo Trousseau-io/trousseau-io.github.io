@@ -33,7 +33,7 @@ The MVP1.0 architecture aims to a single instance approach with a limited the co
 
 * clectl; the command line interface providing connectivity to one or multiple Trousseau instances and handle CRUD operations
 * trousseaud; the server instance acting as a broker towards the key-value store
-* key-value store; the key-value store is based on a single instance of an encrypted etcd at the current stage 
+* key-value store; the key-value store is based on a single instance of an encrypted key-value store instance at the current stage 
 
 The below figure shows a basic representation of the flow: 
 ![mvp1overview](https://raw.githubusercontent.com/Trousseau-io/trousseau-io.github.io/main/assets/diagrams/trousseau_mvp1_-_overview.png)
