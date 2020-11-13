@@ -27,7 +27,8 @@ The name "Trousseau" comes from the French language used within the context of "
 
 ## documentation 
 
-[Architecture](./001-architecture.html) <br>
+[near-future architecture](./001-mvp1_architecture.html) <br>
+[future architecture](./001-mvp15_architecture.html) <br>
 [Quickstart guide](./002-quickstart.html) <br>
 [Deployment](./003-deployment.html) <br>
 [Monitoring](./004-monitoring.html) <br>
