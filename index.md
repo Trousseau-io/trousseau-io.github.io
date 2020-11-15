@@ -27,10 +27,11 @@ The name "Trousseau" comes from the French language used within the context of "
 
 ## documentation 
 
-[near-future architecture](./001-mvp1_architecture.html) <br>
-[future architecture](./001-mvp15_architecture.html) <br>
+[Roadmap](./005-roadmap.html) <br>
+[MVP1.0 architecture](./001-mvp1_architecture.html) <br>
+[MVP1.5 architecture](./001-mvp15_architecture.html) <br>
+[MVP2.0 architecture]()<br>
 [Quickstart guide](./002-quickstart.html) <br>
 [Deployment](./003-deployment.html) <br>
 [Monitoring](./004-monitoring.html) <br>
-[Roadmap](./005-roadmap.html) <br>
 [Contributing](./006-contributing.html) <br>
