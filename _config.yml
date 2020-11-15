@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-hacker
 title: Trousseau
 logo: /assets/img/logo.jpeg
 description: Secure and access your Kubernetes secrets and more
