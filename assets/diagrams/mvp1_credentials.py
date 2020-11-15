@@ -10,8 +10,6 @@ from diagrams.generic.blank import Blank
 
 graph_attr = { 
 	 "splines": "curved",
-     "bgcolor": "transparent"
-
 }
 
 with Diagram("Trousseau MVP1 - Simple Credentials", show=False, direction="LR", graph_attr=graph_attr):
