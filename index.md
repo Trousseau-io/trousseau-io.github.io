@@ -10,28 +10,16 @@ Trousseau secures and provides access Secrets for Kubernetes and more, either on
 
 Kubernetes users are always facing the very same question; how will we handle our Secrets? From a pure Kubernetes
 perspectives, the by-design solution using etcd w/o encryption is not enough. 
-With Trousseau, your applications running within Kubernetes cluster(s) or oustide can access their secrets in a safe
-way with unique features. 
+With Trousseau, your applications running within Kubernetes cluster(s) can access their secrets in a safe and agnostic ways. 
 
-Trousseau is a completly open source and design to be a solution in a landscape where there isn't many options to chose from. 
+Trousseau is an open source project designed to be an universal Kubernetes KMS plugin aiming to address any KMS providers. 
 
 ### what Trousseau will provide
 
-* A easy deployment using an operator
-* A sidecar option to proxy authentication towards external services
-* An API based secure password management for CRUD activities
-* A zero trust option to generate new secrets and configure remote services 
+* A easy deployment
+* Kubernetes native respecting the [Kubernetes KMS plugin design](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/)
+* An API driven approach
+* An universal plugin addressing potentially any KMS provider
 
 ### about the name
 The name "Trousseau" comes from the French language used within the context of "Trousseau de clés" or "Keyring".
-
-## documentation 
-
-[Roadmap](./005-roadmap.html) <br>
-[MVP1.0 architecture](./001-mvp1_architecture.html) <br>
-[MVP1.5 architecture](./001-mvp15_architecture.html) <br>
-[MVP2.0 architecture]()<br>
-[Quickstart guide](./002-quickstart.html) <br>
-[Deployment](./003-deployment.html) <br>
-[Monitoring](./004-monitoring.html) <br>
-[Contributing](./006-contributing.html) <br>
