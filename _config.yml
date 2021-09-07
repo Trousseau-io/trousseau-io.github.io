@@ -4,4 +4,4 @@ plugins:
 - jekyll-remote-theme 
 title: Trousseau
 logo: /assets/img/android-chrome-192x192.png
-description: Secure and access your Kubernetes secrets and more
+description: Store and access your Kubernetes secrets the native way
