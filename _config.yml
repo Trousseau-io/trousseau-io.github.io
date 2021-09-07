@@ -5,3 +5,4 @@ plugins:
 title: Trousseau
 logo: /assets/img/android-chrome-192x192.png
 description: Store and access your Kubernetes secrets the native way
+show_downloads: true
