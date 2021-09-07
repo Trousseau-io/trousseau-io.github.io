@@ -6,3 +6,7 @@ title: Trousseau
 logo: /assets/img/android-chrome-192x192.png
 description: Store and access your Kubernetes secrets the native way
 show_downloads: true
+github:
+  zip_url: https://github.com/Trousseau-io/trousseau/zipball/main
+  tar_url: https://github.com/Trousseau-io/trousseau/tarball/main
+  repository_url: https://github.com/Trousseau-io/trousseau
