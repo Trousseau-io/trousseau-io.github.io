@@ -25,4 +25,4 @@ Trousseau is:
 * API driven approach
 
 ### about the name
-The name *Trousseau* comes from the French language and is usually associated with keys like in *trousseau de clés* meaning *keyring*.
+The name ***trousseau*** comes from the French language and is usually associated with keys like in ***trousseau de clés*** meaning ***keyring***.
