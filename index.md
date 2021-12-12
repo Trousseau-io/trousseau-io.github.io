@@ -19,11 +19,9 @@ How? By using using the [Kubernetes KMS provider](https://kubernetes.io/docs/tas
 
 Trousseau is: 
 
-* Open source project
+* open-source project
 * design based on [Kubernetes KMS provider design](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/)
 * design to be a framework for any KMS provider (see release notes)
-* Easy deployment
-* API driven approach
 
 ### about the name
 The name ***trousseau*** comes from the French language and is usually associated with keys like in ***trousseau de clés*** meaning ***keyring***.
