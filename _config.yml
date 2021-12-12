@@ -1,9 +1,12 @@
 title: Trousseau
 logo: /assets/img/android-chrome-192x192.png
-description: Store and Access your Secrets the Kubernetes native way with any external KMS.
+description: Store & access Secrets the Kubernetes way
+# remote_theme: pages-themes/minimal@v0.2.0
+# plugins:
+# - jekyll-remote-theme 
 theme: jekyll-theme-minimal
 show_downloads: false
-# github:
-#   zip_url: https://github.com/Trousseau-io/trousseau/releases/latest
-#   package_url: https://github.com/Trousseau-io/trousseau/pkgs/container/trousseau
-#   repository_url: https://github.com/Trousseau-io
+github:
+  # zip_url: https://github.com/Trousseau-io/trousseau/releases/latest
+  # package_url: https://github.com/Trousseau-io/trousseau/pkgs/container/trousseau
+  repository_url: https://github.com/Trousseau-io/trousseau
