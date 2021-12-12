@@ -2,7 +2,7 @@
 layout: default
 ---
 
-### why Trousseau
+# documentation
 
 Kubernetes platform users are all facing the very same question; how to handle Secrets?   
 
