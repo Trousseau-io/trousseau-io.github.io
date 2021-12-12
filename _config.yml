@@ -7,6 +7,6 @@ description: Store & access Secrets the Kubernetes way
 theme: jekyll-theme-minimal
 show_downloads: true
 github:
-  zip_url: https://github.com/Trousseau-io/trousseau/zipball/main
-  tar_url: https://github.com/Trousseau-io/trousseau/tarball/main
+  zip_url: https://github.com/Trousseau-io/trousseau/releases/latest
+  package_url: https://github.com/Trousseau-io/trousseau/pkgs/container/trousseau
   repository_url: https://github.com/Trousseau-io
