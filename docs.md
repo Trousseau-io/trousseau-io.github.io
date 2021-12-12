@@ -195,62 +195,65 @@ Here are the steps for a fresh deployment:
                         └── vault-kms-provider.yaml
 ```
 * here are the content for each files:
-    * ```/etc/rancher/rke2/config.yaml```: 
-    ```
-    # server: https://<address>:9345    #to edit/uncomment for second and third control plane node
-    # token: <rke2_server_token>             #to edit/uncomment for second and third control plane node
-    kube-apiserver-arg:
-      - "--encryption-provider-config=/var/lib/rancher/rke2/server/cred/vault-kms-encryption-config.yaml" 
-    kube-apiserver-extra-mount:
-      - "/opt/vault-kms:/opt/vault-kms"
-    ```
+    * ```/etc/rancher/rke2/config.yaml```:   
+
+```
+# server: https://<address>:9345    #to edit/uncomment for second and third control plane node
+# token: <rke2_server_token>             #to edit/uncomment for second and third control plane node
+kube-apiserver-arg:
+  - "--encryption-provider-config=/var/lib/rancher/rke2/server/cred/vault-kms-encryption-config.yaml" 
+kube-apiserver-extra-mount:
+  - "/opt/vault-kms:/opt/vault-kms"
+```
+
     * ```/opt/vault-kms/config.yaml```: 
-    ```
-    provider: vault
-    vault:
-      keynames:
-      - demo-token-test
-      address: https://<vault_address>:8200
-      token: <vault_token>
-    ```
+
+```
+provider: vault
+vault:
+  keynames:
+  - demo-token-test
+  address: https://<vault_address>:8200
+  token: <vault_token>
+```
     * ```/opt/vault-kms/encryption_config.yaml```
-    ```
-    kind: EncryptionConfiguration
-    apiVersion: apiserver.config.k8s.io/v1
-    resources:
-      - resources:
-          - secrets
-        providers:
-          - kms:
-              name: vaultprovider
-              endpoint: unix:///opt/vault-kms/vaultkms.socket
-              cachesize: 1000
-          - identity: {}
-    ```
+```
+kind: EncryptionConfiguration
+apiVersion: apiserver.config.k8s.io/v1
+resources:
+  - resources:
+      - secrets
+    providers:
+      - kms:
+          name: vaultprovider
+          endpoint: unix:///opt/vault-kms/vaultkms.socket
+          cachesize: 1000
+      - identity: {}
+```
     * ```/var/lib/rancher/rke2/server/cred/encryption-config.json```:
-    ```
-    apiVersion: apiserver.config.k8s.io/v1
-    kind: EncryptionConfiguration
-    resources:
-      - resources:
-        - secrets
-        providers:
-        - identity: {}
-    ```
+```
+apiVersion: apiserver.config.k8s.io/v1
+kind: EncryptionConfiguration
+resources:
+  - resources:
+    - secrets
+    providers:
+    - identity: {}
+```
     * ```/var/lib/rancher/rke2/server/cred/encryption_config.yaml```:
-    ```
-    kind: EncryptionConfiguration
-    apiVersion: apiserver.config.k8s.io/v1
-    resources:
-      - resources:
-          - secrets
-        providers:
-          - kms:
-              name: vaultprovider
-              endpoint: unix:///opt/vault-kms/vaultkms.socket
-              cachesize: 1000
-          - identity: {}    
-    ```
+```
+kind: EncryptionConfiguration
+apiVersion: apiserver.config.k8s.io/v1
+resources:
+  - resources:
+      - secrets
+    providers:
+      - kms:
+          name: vaultprovider
+          endpoint: unix:///opt/vault-kms/vaultkms.socket
+          cachesize: 1000
+      - identity: {}    
+```
     * ```/var/lib/rancher/rke2/manifests/vault-kms-provider.yaml```: see [DaemonSet file here](https://github.com/Trousseau-io/trousseau/blob/main/scripts/rke2/vault-kms-provider.yaml)
 * on the first control plane/master/server node, run the followings:
 ```
