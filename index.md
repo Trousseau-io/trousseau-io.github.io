@@ -4,7 +4,8 @@ layout: default
 
 ### why Trousseau
 
-Kubernetes platform users are all facing the very same question; ***how to handle Secrets?***   
+Kubernetes platform users are all facing the very same question:  
+***how to handle Secrets?***  
 
 While there are significant efforts to improve Kubernetes component layers, [the state of Secret Management is not receiving much interests](https://fosdem.org/2021/schedule/event/kubernetes_secret_management/).   
 Using *etcd* to store API object definition & states, Kubernetes secrets are encoded in Base64 and shipped into the key value store database.  Even if the filesystems on which *etcd* runs are encrypted, the secrets are still not.   
