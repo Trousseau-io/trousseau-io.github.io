@@ -49,6 +49,7 @@ Reference: GitHub repository [Release notes](https://github.com/Trousseau-io/tro
 The following are required:
 - a working kubernetes cluster with access to the control plane nodes 
 - a HashiCorp Vault instance (Community or Enterprise)
+- a HashiCorp Vault token
 - a SSH access to the control plane nodes as an admin
 - the necessary user permissions to handle files in ```etc``` and restart serivces, root is best, sudo is better ;)
 - the vault cli tool 
