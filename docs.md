@@ -194,8 +194,9 @@ Here are the steps for a fresh deployment:
                     └── manifests
                         └── vault-kms-provider.yaml
 ```
-* here are the content for each files:
-    * ```/etc/rancher/rke2/config.yaml```:   
+
+Here are the content for each files:
+* ```/etc/rancher/rke2/config.yaml```:   
 
 ```
 # server: https://<address>:9345    #to edit/uncomment for second and third control plane node
@@ -206,8 +207,7 @@ kube-apiserver-extra-mount:
   - "/opt/vault-kms:/opt/vault-kms"
 ```
 
-    * ```/opt/vault-kms/config.yaml```: 
-
+* ```/opt/vault-kms/config.yaml```: 
 ```
 provider: vault
 vault:
@@ -216,7 +216,8 @@ vault:
   address: https://<vault_address>:8200
   token: <vault_token>
 ```
-    * ```/opt/vault-kms/encryption_config.yaml```
+
+* ```/opt/vault-kms/encryption_config.yaml```
 ```
 kind: EncryptionConfiguration
 apiVersion: apiserver.config.k8s.io/v1
@@ -230,7 +231,8 @@ resources:
           cachesize: 1000
       - identity: {}
 ```
-    * ```/var/lib/rancher/rke2/server/cred/encryption-config.json```:
+
+* ```/var/lib/rancher/rke2/server/cred/encryption-config.json```:
 ```
 apiVersion: apiserver.config.k8s.io/v1
 kind: EncryptionConfiguration
@@ -240,7 +242,8 @@ resources:
     providers:
     - identity: {}
 ```
-    * ```/var/lib/rancher/rke2/server/cred/encryption_config.yaml```:
+
+* ```/var/lib/rancher/rke2/server/cred/encryption_config.yaml```:
 ```
 kind: EncryptionConfiguration
 apiVersion: apiserver.config.k8s.io/v1
@@ -254,18 +257,23 @@ resources:
           cachesize: 1000
       - identity: {}    
 ```
-    * ```/var/lib/rancher/rke2/manifests/vault-kms-provider.yaml```: see [DaemonSet file here](https://github.com/Trousseau-io/trousseau/blob/main/scripts/rke2/vault-kms-provider.yaml)
+
+* ```/var/lib/rancher/rke2/manifests/vault-kms-provider.yaml```: see [DaemonSet file here](https://github.com/Trousseau-io/trousseau/blob/main/scripts/rke2/vault-kms-provider.yaml)
+
 * on the first control plane/master/server node, run the followings:
 ```
 curl -sfL https://get.rke2.io | sh -
 systemctl enable --now rke2-server.service
 ```
+
 * get the server node token from ```/var/lib/rancher/rke2/server/node-token``` and add it to the ```/etc/rancher/rke2/config.yaml``` for control plane/master/server node 2 and 3
+
 * run on control plane/master/server node 2 and 3:
 ```
 curl -sfL https://get.rke2.io | sh -
 systemctl enable --now rke2-server.service
 ```
+
 * carry on with adding worker/agent nodes as usual (and without any of the about configuration)
 
 ## Setup monitoring
