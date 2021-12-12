@@ -12,14 +12,14 @@ Using *etcd* to store API object definition & states, Kubernetes secrets are enc
 Instead of leveraging the native Kubernetes way to manage secrets, commercial and open source solutions solve this design flaw by leveraging different approaches all using different toolsets or practices. This leads to training and maintaining niche skills and tools increasing cost and complexity of Kubernetes day 0, 1 and 2. 
 
 Once deployed, Trousseau will enable seamless secret management using the native Kubernetes API and ```kubectl``` CLI usage while leveraging an existing Key Management Service (KMS) provider.  
-How? By using using the [Kubernetes KMS pluging](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/) framework to provide an envelop encryption scheme to encrypt secrets on the fly.
+How? By using using the [Kubernetes KMS provider](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/) framework to provide an envelop encryption scheme to encrypt secrets on the fly.
 
 ### what is Trousseau
 
 Trousseau is: 
 
 * Open source project
-* design based on [Kubernetes KMS plugin design](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/)
+* design based on [Kubernetes KMS provider design](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/)
 * design to be a framework for any KMS provider (see release notes)
 * Easy deployment
 * API driven approach
