@@ -168,7 +168,7 @@ the ```kubelet``` section:
 Once everything in place, perform a ```rke up``` to reload the configuration.
 
 ### RKE2 Specifics
-Building a Kubernetes RKE2 cluster is a different approach then with RKE fromn a configuration perpective as there is no more ```cluster.yml```configuration file.   
+Building a Kubernetes RKE2 cluster is a different approach then with RKE fromn a configuration perpective as there is no more ```cluster.yml```configuration file. Review the [RKE HA documentation](https://docs.rke2.io/install/ha/) for more details.  
 
 **Note: if you already have an existing RKE2 cluster deployed, the *etcd* is being encrypted at-rest by default with a key configured in the file ```/var/lib/rancher/rke2/server/cred/encryption-config.json```. Removing this file or reconfiguring with the below steps will render previous secrets unreadable!**
 
