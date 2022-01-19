@@ -1,2 +1,3 @@
-# trousseau-io.github.io
-This is the website content for the project trousseau.io
+Redirecting to https://ondat.io/trousseau
+Troussau repo is available here: https://github.com/ondat/trousseau
+
